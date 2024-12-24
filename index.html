@@ -24,17 +24,6 @@
 <body>
 
 <div class="page-wrapper">
-    <!-- <header>
-        <div class="brand animate"><a href=""><img src="assets/img/logo.png" alt=""></a></div>
-        <nav>
-            <ul class="navigation animate">
-                <li><a href="" data-toggle="modal" data-target="#modal-about-us">About Us</a></li>
-                <li><a href="" data-toggle="modal" data-target="#modal-our-works">Our Works</a></li>
-                <li><a href="" data-toggle="modal" data-target="#modal-services">Services</a></li>
-                <li><a href="" data-toggle="modal" data-target="#modal-contact-us">Contact</a></li>
-            </ul>
-        </nav>
-    </header> -->
     <div class="content-wrapper">
         <div class="content-main animate">
             <div class="container">
@@ -49,68 +38,6 @@
         </div>
         <!--end background-wrapper-->
     </div>
-    <!--end content-wrapper-->
-    <!-- <footer>
-        <div class="social-icons animate">
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-pinterest"></i></a>
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-        </div>
-    </footer> -->
 </div>
 <!--end page-wrapper-->
-
-<script  src="assets/js/jquery-2.2.1.min.js"></script>
-<script  src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script  src="assets/js/jquery.validate.min.js"></script>
-<script  src="assets/js/jquery.magnific-popup.min.js"></script>
-<script  src="assets/js/sketch.min.js"></script>
-<script  src="assets/js/custom.js"></script>
-
-<script>
-    // Background
-
-    var COLOURS = [ '#A7EBCA', '#dedede', '#ff6767', '#61dfff' ];
-    var radius = 0;
-    var randomColor = 0;
-
-    Sketch.create({
-
-        container: document.getElementById( 'background-content' ),
-        autoclear: false,
-        retina: 'auto',
-
-        update: function() {
-            radius = 0 + abs( sin( this.millis * 0.003 ) * 15 );
-        },
-
-        click: function() {
-            randomColor = parseInt( 0 + (COLOURS.length - 0) * Math.random(), 10 ) ;
-        },
-
-        touchmove: function() {
-
-            for ( var i = this.touches.length - 1, touch; i >= 0; i-- ) {
-
-                touch = this.touches[i];
-
-                this.lineCap = 'round';
-                this.lineJoin = 'round';
-                this.fillStyle = this.strokeStyle = COLOURS[ randomColor % COLOURS.length ];
-                this.lineWidth = radius;
-
-                this.beginPath();
-                this.moveTo( touch.ox, touch.oy );
-                this.lineTo( touch.x, touch.y );
-                this.stroke();
-            }
-        }
-    });
-
-
-</script>
-
 </body>
